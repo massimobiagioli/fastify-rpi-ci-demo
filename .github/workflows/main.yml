@@ -23,3 +23,5 @@ jobs:
         run: pm2 stop fastify-rpi-ci-demo
       - name: Start the server
         run: pm2 start server.js --name fastify-rpi-ci-demo
+      - name: Save pm2 process
+        run: pm2 save

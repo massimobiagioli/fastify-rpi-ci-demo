@@ -14,4 +14,4 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Copy files to dist folder
-        run: cp -a . /opt/fastify-rpi-ci-demo
+        run: cp -a . /home/massimo/fastify-rpi-ci-demo

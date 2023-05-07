@@ -15,3 +15,11 @@ jobs:
         run: npm install
       - name: Copy files to dist folder
         run: cp -a . /home/massimo/fastify-rpi-ci-demo
+      - name: Change working directory
+        run: cd /home/massimo/fastify-rpi-ci-demo
+      - name: Remove pm2 startup script
+        run: pm2 unstartup systemd
+      - name: Init pm2 startup script
+        run: pm2 start server.js
+      - name: Save pm2 startup script
+        run: pm2 startup systemd

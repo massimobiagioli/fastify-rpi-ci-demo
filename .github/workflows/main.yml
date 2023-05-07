@@ -16,6 +16,6 @@ jobs:
       - name: Check pm2 version
         run: pm2 -V
       - name: Stop all pm2 processes
-        run: pm2 delete all — ||
+        run: pm2 delete all
       - name: Start server
         run: pm2 start server.js — name fastify-rpi-ci-demo -i 2

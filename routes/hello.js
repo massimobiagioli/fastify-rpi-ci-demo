@@ -1,5 +1,5 @@
 export default async function (app, opts) {
     app.get('/', async () => {
-        return 'hello world v4'
+        return 'hello world v5'
     })
 }

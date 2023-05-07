@@ -19,7 +19,7 @@ jobs:
         run: cp -a . /home/massimo/fastify-rpi-ci-demo
       - name: Change working directory
         run: cd /home/massimo/fastify-rpi-ci-demo
-      - name: Stop pm2 process
+      - name: Stop pm2 process || true
         run: pm2 stop fastify-rpi-ci-demo
       - name: Start the server
         run: pm2 start server.js --name fastify-rpi-ci-demo

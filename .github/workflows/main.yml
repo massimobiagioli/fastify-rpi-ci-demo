@@ -10,12 +10,8 @@ jobs:
   deploy:
     runs-on: self-hosted
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Install dependencies
         run: npm install
-      - name: Check pm2 version
-        run: pm2 -V
-      - name: Stop all pm2 processes
-        run: pm2 delete all || true
-      - name: Start server
-        run: pm2 start server.js --name "fastify-rpi-ci-demo" -i max
+      - name: Copy files
+        run: cp -a . /opt/fastify-rpi-ci-demo

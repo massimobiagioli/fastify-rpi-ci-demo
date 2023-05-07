@@ -15,5 +15,5 @@ jobs:
         run: npm install
       - run: pm2 -V
       - name: Start server
-        run: pm2 start server.js --watch -i max
+        run: pm2 start server.js --watch -i max -f
       - run: pm2 list

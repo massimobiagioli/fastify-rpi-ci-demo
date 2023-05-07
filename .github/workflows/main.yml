@@ -20,4 +20,4 @@ jobs:
       - name: Change working directory
         run: cd /home/massimo/fastify-rpi-ci-demo
       - name: Start the server
-        run: pm2 start index.js --name fastify-rpi-ci-demo
+        run: pm2 start server.js --name fastify-rpi-ci-demo

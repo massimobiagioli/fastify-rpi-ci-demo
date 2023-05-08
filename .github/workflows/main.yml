@@ -13,13 +13,6 @@ jobs:
       - uses: actions/checkout@v3
       - name: Install dependencies
         run: npm install
-      - name: Clean dist folder
-        run: rm -rf /home/massimo/fastify-rpi-ci-demo
-      - name: Copy files to dist folder
-        run: cp -a . /home/massimo/fastify-rpi-ci-demo
-      - name: Change working directory
-        run: cd /home/massimo/fastify-rpi-ci-demo
-      - run: pwd
       - name: Stop pm2 process || true
         run: pm2 stop fastify-rpi-ci-demo
       - name: Start the server
